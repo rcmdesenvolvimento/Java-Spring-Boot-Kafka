@@ -1,4 +1,4 @@
-package com.rcm.sistemas.shop.validator;
+package rcm.sistemas.shop.validator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

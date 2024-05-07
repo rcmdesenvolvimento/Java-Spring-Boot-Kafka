@@ -8,7 +8,7 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.rcm.sistemas</groupId>
+	<groupId>rcm.sistemas</groupId>
 	<artifactId>shop-validator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>shop-validator</name>
