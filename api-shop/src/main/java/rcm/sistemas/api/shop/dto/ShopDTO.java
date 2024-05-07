@@ -14,9 +14,13 @@ import rcm.sistemas.api.shop.model.Shop;
 public class ShopDTO {
 
 	private String identifier;
+	
 	private LocalDate dateShop;
+	
 	private String status;
+	
 	private String buyerIdentifier;
+	
 	private List<ShopItemDTO> items = new ArrayList<>();
 
 	public static ShopDTO convert(Shop shop) {
