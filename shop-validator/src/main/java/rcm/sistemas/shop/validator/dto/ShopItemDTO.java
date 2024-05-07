@@ -8,7 +8,7 @@ import lombok.Setter;
 public class ShopItemDTO {
 
 	private String productIdentifier;
-	private Integer amount;
+	private Integer amount; 
 	private Float price;
 
 }
