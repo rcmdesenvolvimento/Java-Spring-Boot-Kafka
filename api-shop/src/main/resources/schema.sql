@@ -1,11 +1,13 @@
-create table shop(
+create schema if not exists shop;
+
+create table shop.shop(
 	id bigserial primary key,
 	identifier varchar(100) not null,
 	status varchar(20) not null,
 	date_shop date
 );
 
-create table shop_item(
+create table shop.shop_item(
 	id bigserial primary key,
 	product_identifier varchar(100) not null,
 	amount int not null,
