@@ -1,4 +1,4 @@
-package rcm.sistemas.shop.validator.dto;
+package rcm.sistemas.api.dto;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

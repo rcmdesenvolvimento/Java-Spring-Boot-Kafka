@@ -1,4 +1,4 @@
-package rcm.sistemas.api.shop.controller;
+package rcm.sistemas.api.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
-import rcm.sistemas.api.shop.dto.ShopDTO;
-import rcm.sistemas.api.shop.events.KafkaClient;
-import rcm.sistemas.api.shop.model.Shop;
-import rcm.sistemas.api.shop.model.ShopItem;
-import rcm.sistemas.api.shop.repository.ShopRepository;
+import rcm.sistemas.api.dto.ShopDTO;
+import rcm.sistemas.api.events.KafkaClient;
+import rcm.sistemas.api.model.Shop;
+import rcm.sistemas.api.model.ShopItem;
+import rcm.sistemas.api.repository.ShopRepository;
 
 @RestController
 @RequestMapping("/shop")
@@ -24,7 +24,7 @@ import rcm.sistemas.api.shop.repository.ShopRepository;
 public class ShopController {
 
 	private final ShopRepository shopRepository;
-	//private final SendKafkaMessage sendKafkaMessage;
+	// private final SendKafkaMessage sendKafkaMessage;
 	private final KafkaClient kafkaClient;
 
 	@GetMapping

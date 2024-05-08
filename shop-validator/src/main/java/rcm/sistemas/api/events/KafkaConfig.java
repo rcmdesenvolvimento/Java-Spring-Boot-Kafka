@@ -1,4 +1,4 @@
-package rcm.sistemas.shop.validator.events;
+package rcm.sistemas.api.events;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-import rcm.sistemas.shop.validator.dto.ShopDTO;
+import rcm.sistemas.api.dto.ShopDTO;
 
 
 @Configuration
@@ -33,7 +33,7 @@ public class KafkaConfig {
 		props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
 		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-		props.put(ProducerConfig.CLIENT_ID_CONFIG, "api-shop");
+		//props.put(ProducerConfig.CLIENT_ID_CONFIG, "api-shop");
 		return new DefaultKafkaProducerFactory<>(props);
 	}
 

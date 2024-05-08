@@ -1,4 +1,4 @@
-package rcm.sistemas.api.shop.model;
+package rcm.sistemas.api.model;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -15,7 +15,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import rcm.sistemas.api.shop.dto.ShopDTO;
+import rcm.sistemas.api.dto.ShopDTO;
 
 @Getter
 @Setter
