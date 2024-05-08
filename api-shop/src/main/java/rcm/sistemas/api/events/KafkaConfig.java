@@ -1,4 +1,4 @@
-package rcm.sistemas.api.shop.events;
+package rcm.sistemas.api.events;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-import rcm.sistemas.api.shop.dto.ShopDTO;
+import rcm.sistemas.api.dto.ShopDTO;
 
 @Configuration
 public class KafkaConfig {

@@ -1,10 +1,10 @@
-package rcm.sistemas.api.shop.events;
+package rcm.sistemas.api.events;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import rcm.sistemas.api.shop.dto.ShopDTO;
+import rcm.sistemas.api.dto.ShopDTO;
 
 @Service
 @RequiredArgsConstructor

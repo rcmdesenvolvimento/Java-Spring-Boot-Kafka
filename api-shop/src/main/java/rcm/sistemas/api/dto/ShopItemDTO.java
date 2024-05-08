@@ -1,8 +1,8 @@
-package rcm.sistemas.api.shop.dto;
+package rcm.sistemas.api.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import rcm.sistemas.api.shop.model.ShopItem;
+import rcm.sistemas.api.model.ShopItem;
 
 @Getter
 @Setter

@@ -1,4 +1,4 @@
-package rcm.sistemas.api.shop.service;
+package rcm.sistemas.api.service;
 
 import org.springframework.stereotype.Service;
 

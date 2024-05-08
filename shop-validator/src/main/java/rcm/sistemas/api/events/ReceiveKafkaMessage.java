@@ -1,4 +1,4 @@
-package rcm.sistemas.shop.validator.events;
+package rcm.sistemas.api.events;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import rcm.sistemas.shop.validator.dto.ShopDTO;
-import rcm.sistemas.shop.validator.dto.ShopItemDTO;
-import rcm.sistemas.shop.validator.model.Product;
-import rcm.sistemas.shop.validator.repository.ProductRepository;
+import rcm.sistemas.api.dto.ShopDTO;
+import rcm.sistemas.api.dto.ShopItemDTO;
+import rcm.sistemas.api.model.Product;
+import rcm.sistemas.api.repository.ProductRepository;
 
 @Slf4j
 @Service
@@ -25,19 +25,29 @@ public class ReceiveKafkaMessage {
 
 	@KafkaListener(topics = SHOP_TOPIC_NAME, groupId = "group")
 	public void listenShopTopic(ShopDTO shopDTO) {
+		
 		log.info("Compra recebida no tópico: {}", shopDTO.getIdentifier());
+		
+		System.out.println("Compra recebida no tópico: {}" + shopDTO.getIdentifier());
 
 		boolean success = true;
 		for (ShopItemDTO item : shopDTO.getItems()) {
+			
+			String _productIdentifier = item.getProductIdentifier();
+			System.out.println("Lendo o produto : " + _productIdentifier );
+			
 			Product product = productRepository.findByIdentifier(item.getProductIdentifier());
+			
 			if (!isValidShop(item, product)) {
 				shopError(shopDTO);
+				System.out.println("Erro lendo o produto : " + shopDTO.getIdentifier());
 				success = false;
 				break;
 			}
 		}
 		if (success) {
 			shopSuccess(shopDTO);
+			System.out.println("Compra efetuada com sucesso : " + shopDTO.getIdentifier());
 		}
 
 	}

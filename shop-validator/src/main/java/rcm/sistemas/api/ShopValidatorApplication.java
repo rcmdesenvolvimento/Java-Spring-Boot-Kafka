@@ -1,13 +1,13 @@
-package rcm.sistemas.api.shop;
+package rcm.sistemas.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiShopApplication {
+public class ShopValidatorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiShopApplication.class, args);
+		SpringApplication.run(ShopValidatorApplication.class, args);
 	}
 
 }

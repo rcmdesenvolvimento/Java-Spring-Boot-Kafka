@@ -1,4 +1,4 @@
-package rcm.sistemas.api.shop.dto;
+package rcm.sistemas.api.dto;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 
 import lombok.Getter;
 import lombok.Setter;
-import rcm.sistemas.api.shop.model.Shop;
+//import rcm.sistemas.api.model.Shop;
+import rcm.sistemas.api.model.Shop;
 
 @Getter
 @Setter
