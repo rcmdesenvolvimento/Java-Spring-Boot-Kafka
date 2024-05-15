@@ -28,8 +28,6 @@ public class ReceiveKafkaMessage {
 		
 		log.info("Compra recebida no tópico: {}", shopDTO.getIdentifier());
 		
-		System.out.println("Compra recebida no tópico: {}" + shopDTO.getIdentifier());
-
 		boolean success = true;
 		for (ShopItemDTO item : shopDTO.getItems()) {
 			
